@@ -125,31 +125,6 @@ const Process = () => {
                                     />
                                 )}
 
-                                {index < steps.length - 1 && (
-                                    <motion.div
-                                        className="mobile-line-anim"
-                                        style={{
-                                            position: 'absolute',
-                                            top: '120px',
-                                            left: '50%',
-                                            width: '2px',
-                                            height: '60px',
-                                            background: 'linear-gradient(to bottom, #F68D20, #F4145C)',
-                                            transformOrigin: 'top',
-                                            zIndex: 0,
-                                            transform: 'translateX(-50%)'
-                                        }}
-                                        initial={{ scaleY: 0 }}
-                                        whileInView={{ scaleY: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{
-                                            delay: lineDelay,
-                                            duration: 0.6,
-                                            ease: "easeInOut"
-                                        }}
-                                    />
-                                )}
-
                                 <motion.div
                                     style={{ position: 'relative', zIndex: 10, marginBottom: '32px' }}
                                     initial={{ scale: 0, opacity: 0 }}

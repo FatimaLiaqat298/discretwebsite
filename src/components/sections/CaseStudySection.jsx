@@ -146,8 +146,8 @@ const CaseStudySection = () => {
                             color: '#F68D20',
                             opacity: 0.3,
                             fontFamily: 'Georgia, serif'
-                        }}>"</span>
-                        Actual work. Real results. These are the companies we've helped scale from chaos to clarity.
+                        }}>&quot;</span>
+                        Actual work. Real results. These are the companies we&apos;ve helped scale from chaos to clarity.
                         <span style={{
                             position: 'absolute',
                             right: '0',
@@ -156,7 +156,7 @@ const CaseStudySection = () => {
                             color: '#F68D20',
                             opacity: 0.3,
                             fontFamily: 'Georgia, serif'
-                        }}>"</span>
+                        }}>&quot;</span>
                     </p>
                 </motion.div>
 
@@ -298,7 +298,7 @@ const CaseStudySection = () => {
                                     color: '#ccc',
                                     marginBottom: '20px'
                                 }}>
-                                    "{activeStudy.quote}"
+                                    &quot;{activeStudy.quote}&quot;
                                 </p>
                                 <div style={{ paddingLeft: '15px', borderLeft: '4px solid #F68D20', textAlign: 'left' }}>
                                     <div style={{ fontWeight: 700, fontSize: '1.1rem', color: 'white' }}>

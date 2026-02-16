@@ -1,17 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Project Structure
+
+> [!IMPORTANT]
+> This project has a nested structure. All code is located inside the `discretwebsite/` subdirectory.
 
 ## Getting Started
 
-First, run the development server:
+First, navigate into the project directory:
 
 ```bash
+cd discretwebsite
+```
+
+Then, run the development server:
+
+```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

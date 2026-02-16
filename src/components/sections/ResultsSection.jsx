@@ -61,7 +61,7 @@ const ResultsSection = () => {
                         Our Results
                     </h4>
                     <h2 className="text-fluid-h2" style={{ fontWeight: 800, marginBottom: '16px', lineHeight: 1.2 }}>
-                        It's All About The <br /> <span className="text-gradient">Impact We Created</span>
+                        It&apos;s All About The <br /> <span className="text-gradient">Impact We Created</span>
                     </h2>
                 </motion.div>
 

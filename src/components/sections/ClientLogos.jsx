@@ -4,20 +4,6 @@ import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import './ClientLogos.css';
 
-const logos = [
-    '/berries.png',
-    '/clarence.png',
-    '/crustino pizza.png',
-    '/direct kissan logo.png',
-    '/hera.png',
-    '/logo-blue-1536x466.png',
-    '/logo-salpa.png',
-    '/nu boutique.png',
-    '/pastels.png',
-    '/personally fit.png',
-    '/pres.png',
-    '/urdu international.png'
-];
 
 const ClientLogos = () => {
     const trackRef = useRef(null);

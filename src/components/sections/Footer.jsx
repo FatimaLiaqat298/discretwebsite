@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
-import { FiMail, FiMapPin } from 'react-icons/fi';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -12,7 +12,7 @@ const Footer = () => {
                     {/* Column 1: Branding (3 cols) */}
                     <div style={{ gridColumn: 'span 12' }} className="col-lg-3">
                         <div style={{ marginBottom: '24px' }}>
-                            <img src="/discret-logo-colored.png" alt="Discret Digital Logo" style={{ height: '50px', marginBottom: '16px' }} />
+                            <Image src="/discret-logo-colored.png" alt="Discret Digital Logo" width={150} height={50} style={{ height: '50px', width: 'auto', marginBottom: '16px' }} />
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '16px' }}>Discret Digital LTD</h3>
                             <p style={{ color: '#888', lineHeight: 1.6, maxWidth: '300px' }}>
                                 A creative agency that empowers entrepreneurs with the operations, marketing, and tech support they need to turn early momentum into long-term growth.

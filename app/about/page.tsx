@@ -50,19 +50,51 @@ export default function About() {
 
     return (
         <div ref={containerRef} style={{ position: 'relative', height: '400vh', backgroundColor: '#050505' }}>
-            <div style={{
+            <div className="about-grid" style={{
                 maxWidth: '1280px',
                 margin: '0 auto',
                 width: '100%',
-                padding: '0 80px',
-                display: 'grid',
-                gridTemplateColumns: '1fr 0.9fr',
-                gap: '80px',
                 position: 'relative'
             }}>
-
+                <style>{`
+                    .about-grid {
+                        display: grid;
+                        grid-template-columns: 1.2fr 0.8fr;
+                        gap: 80px;
+                        padding: 0 80px;
+                    }
+                    .about-image-container {
+                        height: 65vh;
+                    }
+                    @media (max-width: 1024px) {
+                        .about-grid {
+                            gap: 40px;
+                            padding: 0 40px;
+                        }
+                    }
+                    @media (max-width: 768px) {
+                        .about-grid {
+                            gap: 20px;
+                            padding: 0 20px;
+                        }
+                        .about-image-container {
+                            height: 40vh;
+                            border-radius: 24px !important;
+                        }
+                        .about-text-content {
+                            padding-right: 0px !important;
+                        }
+                    }
+                    @media (max-width: 480px) {
+                        .about-grid {
+                            grid-template-columns: 1.1fr 0.9fr;
+                            gap: 12px;
+                            padding: 0 12px;
+                        }
+                    }
+                `}</style>
                 {/* Left Side: Scrolling Content */}
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div className="about-text-content" style={{ display: 'flex', flexDirection: 'column' }}>
                     {SECTIONS.map((section, i) => (
                         <div
                             key={section.id}
@@ -88,28 +120,28 @@ export default function About() {
                                     </span>
                                 </div>
 
-                                <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', fontWeight: 900, lineHeight: 0.9, textTransform: 'uppercase', color: 'white', margin: 0, letterSpacing: '-0.03em' }}>
+                                <h1 style={{ fontSize: 'clamp(1.5rem, 6vw, 5.5rem)', fontWeight: 900, lineHeight: 0.9, textTransform: 'uppercase', color: 'white', margin: 0, letterSpacing: '-0.03em' }}>
                                     {section.title.split(" ").map((word, idx) => (
                                         <span key={idx} style={{ display: 'block' }}>{word}</span>
                                     ))}
                                 </h1>
 
                                 <div style={{ maxWidth: '450px' }}>
-                                    <p style={{ color: '#999', fontSize: '1.05rem', lineHeight: 1.6, whiteSpace: 'pre-line', fontWeight: 500 }}>
+                                    <p style={{ color: '#999', fontSize: 'clamp(0.8rem, 2vw, 1.05rem)', lineHeight: 1.6, whiteSpace: 'pre-line', fontWeight: 500 }}>
                                         {section.description}
                                     </p>
                                 </div>
 
                                 {i === 0 && (
-                                    <div style={{ display: 'flex', gap: '16px', paddingTop: '8px' }}>
+                                    <div style={{ display: 'flex', gap: '12px', paddingTop: '8px' }}>
                                         {[Twitter, Instagram, Linkedin].map((Icon, idx) => (
                                             <motion.a
                                                 key={idx}
                                                 href="#"
                                                 whileHover={{ y: -5, scale: 1.1, color: section.color, backgroundColor: 'rgba(255,255,255,0.1)' }}
-                                                style={{ padding: '12px', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '50%', transition: 'all 0.3s', border: '1px solid rgba(255,255,255,0.08)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                                style={{ padding: '10px', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '50%', transition: 'all 0.3s', border: '1px solid rgba(255,255,255,0.08)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                             >
-                                                <Icon size={18} />
+                                                <Icon size={16} />
                                             </motion.a>
                                         ))}
                                     </div>
@@ -121,15 +153,15 @@ export default function About() {
 
                 {/* Right Side: Sticky Frame */}
                 <div style={{ position: 'sticky', top: 0, height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                    <div style={{
+                    <div className="about-image-container" style={{
                         position: 'relative',
                         aspectRatio: '4/5',
-                        height: '65vh',
                         borderRadius: '56px',
                         overflow: 'hidden',
                         backgroundColor: '#000',
                         border: '1px solid rgba(255,255,255,0.08)',
-                        boxShadow: '0 40px 100px rgba(0,0,0,0.5)'
+                        boxShadow: '0 40px 100px rgba(0,0,0,0.5)',
+                        width: '100%'
                     }}>
                         <AnimatePresence mode="wait">
                             <motion.div

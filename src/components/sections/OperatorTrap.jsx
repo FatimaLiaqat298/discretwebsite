@@ -51,7 +51,7 @@ const OperatorTrap = () => {
                             backgroundClip: 'text',
                             WebkitBackgroundClip: 'text',
                             color: 'transparent'
-                        }}>"Operator"</span> Trap
+                        }}>&quot;Operator&quot;</span> Trap
                     </h2>
 
                     <p style={{
@@ -62,7 +62,7 @@ const OperatorTrap = () => {
                         margin: '0 auto 16px',
                         fontWeight: 500
                     }} className="trap-para-1">
-                        You aren't scaling because you're too busy working.
+                        You aren&apos;t scaling because you&apos;re too busy working.
                     </p>
 
                     <p style={{
@@ -72,7 +72,7 @@ const OperatorTrap = () => {
                         maxWidth: '750px',
                         margin: '0 auto 60px'
                     }} className="trap-para-2">
-                        Most founders are trapped in the <strong style={{ color: '#fff' }}>"Operator's Loop"</strong> — managing tech, answering leads, and fixing SOPs. If you stop working for a week, your revenue stops too. That's not a business; it's a job.
+                        Most founders are trapped in the <strong style={{ color: '#fff' }}>&quot;Operator&apos;s Loop&quot;</strong> — managing tech, answering leads, and fixing SOPs. If you stop working for a week, your revenue stops too. That&apos;s not a business; it&apos;s a job.
                     </p>
 
                     <motion.div
@@ -119,7 +119,7 @@ const OperatorTrap = () => {
                             marginLeft: 'auto',
                             marginRight: 'auto'
                         }} className="solution-text">
-                            We take over the operations, tech, and marketing so you can finally step into the <strong style={{ color: 'white' }}>"Owner"</strong> seat.
+                            We take over the operations, tech, and marketing so you can finally step into the <strong style={{ color: 'white' }}>&quot;Owner&quot;</strong> seat.
                         </p>
                     </motion.div>
 
