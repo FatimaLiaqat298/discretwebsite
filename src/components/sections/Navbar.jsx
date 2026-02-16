@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { mainNavLinks, aboutNavLinks } from '@/src/data/navigation';
-
 const Navbar = () => {
     const pathname = usePathname();
     const isAboutPage = pathname === '/about';

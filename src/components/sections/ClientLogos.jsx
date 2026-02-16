@@ -3,10 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import '@/src/styles/ClientLogos.css';
-
-
 import { clientLogos } from '@/src/data/clientLogos';
-
 const ClientLogos = () => {
     const trackRef = useRef(null);
 
