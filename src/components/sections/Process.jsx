@@ -1,31 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaSearch, FaCogs, FaRocket } from 'react-icons/fa';
-
-const steps = [
-    {
-        id: 1,
-        title: "Audit",
-        description: "We find the leaks in your current systems and marketing.",
-        icon: FaSearch,
-        color: "#F68D20", // Orange
-    },
-    {
-        id: 2,
-        title: "Install",
-        description: "We build your \"Growth Infrastructure\" (Tech + Ops + Content).",
-        icon: FaCogs, // Changed from PenTool to Cogs for "Infrastructure/Install" context
-        color: "#F4145C", // Pink
-    },
-    {
-        id: 3,
-        title: "Scale",
-        description: "We turn on the lead-gen faucet and optimize for maximum ROI.",
-        icon: FaRocket,
-        color: "#B10F43", // Deep Purple
-    }
-];
+import { steps } from '@/src/data/processSteps';
 
 const Process = () => {
     return (
@@ -116,31 +92,6 @@ const Process = () => {
                                         }}
                                         initial={{ scaleX: 0 }}
                                         whileInView={{ scaleX: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{
-                                            delay: lineDelay,
-                                            duration: 0.6,
-                                            ease: "easeInOut"
-                                        }}
-                                    />
-                                )}
-
-                                {index < steps.length - 1 && (
-                                    <motion.div
-                                        className="mobile-line-anim"
-                                        style={{
-                                            position: 'absolute',
-                                            top: '120px',
-                                            left: '50%',
-                                            width: '2px',
-                                            height: '60px',
-                                            background: 'linear-gradient(to bottom, #F68D20, #F4145C)',
-                                            transformOrigin: 'top',
-                                            zIndex: 0,
-                                            transform: 'translateX(-50%)'
-                                        }}
-                                        initial={{ scaleY: 0 }}
-                                        whileInView={{ scaleY: 1 }}
                                         viewport={{ once: true }}
                                         transition={{
                                             delay: lineDelay,

@@ -2,23 +2,8 @@
 
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import './ClientLogos.css';
-
-const logos = [
-    '/berries.png',
-    '/clarence.png',
-    '/crustino pizza.png',
-    '/direct kissan logo.png',
-    '/hera.png',
-    '/logo-blue-1536x466.png',
-    '/logo-salpa.png',
-    '/nu boutique.png',
-    '/pastels.png',
-    '/personally fit.png',
-    '/pres.png',
-    '/urdu international.png'
-];
-
+import '@/src/styles/ClientLogos.css';
+import { clientLogos } from '@/src/data/clientLogos';
 const ClientLogos = () => {
     const trackRef = useRef(null);
 
@@ -108,49 +93,24 @@ const ClientLogos = () => {
 
             <div className="logos-slide-track" ref={trackRef}>
                 {/* Double the logos to create seamless loop */}
-                {[
-                    { src: '/berries.png', alt: 'Berries Client Logo' },
-                    { src: '/clarence.png', alt: 'Clarence Client Logo' },
-                    { src: '/crustino pizza.png', alt: 'Crustino Pizza Client Logo' },
-                    { src: '/direct kissan logo.png', alt: 'Direct Kissan Client Logo' },
-                    { src: '/hera.png', alt: 'Hera Client Logo' },
-                    { src: '/logo-blue-1536x466.png', alt: 'Client Partner Logo' },
-                    { src: '/logo-salpa.png', alt: 'Salpa Client Logo' },
-                    { src: '/nu boutique.png', alt: 'Nu Boutique Client Logo' },
-                    { src: '/pastels.png', alt: 'Pastels Client Logo' },
-                    { src: '/personally fit.png', alt: 'Personally Fit Client Logo' },
-                    { src: '/pres.png', alt: 'Pres Client Logo' },
-                    { src: '/urdu international.png', alt: 'Urdu International Client Logo' }
-                ].concat([
-                    { src: '/berries.png', alt: 'Berries Client Logo' },
-                    { src: '/clarence.png', alt: 'Clarence Client Logo' },
-                    { src: '/crustino pizza.png', alt: 'Crustino Pizza Client Logo' },
-                    { src: '/direct kissan logo.png', alt: 'Direct Kissan Client Logo' },
-                    { src: '/hera.png', alt: 'Hera Client Logo' },
-                    { src: '/logo-blue-1536x466.png', alt: 'Client Partner Logo' },
-                    { src: '/logo-salpa.png', alt: 'Salpa Client Logo' },
-                    { src: '/nu boutique.png', alt: 'Nu Boutique Client Logo' },
-                    { src: '/pastels.png', alt: 'Pastels Client Logo' },
-                    { src: '/personally fit.png', alt: 'Personally Fit Client Logo' },
-                    { src: '/pres.png', alt: 'Pres Client Logo' },
-                    { src: '/urdu international.png', alt: 'Urdu International Client Logo' }
-                ]).map((logo, index) => (
-                    <div key={index} className="logo-slide">
-                        <Image
-                            src={logo.src}
-                            alt={logo.alt}
-                            width={150}
-                            height={50}
-                            className="logo-image"
-                            style={{
-                                height: '50px',
-                                width: 'auto',
-                                objectFit: 'contain',
-                                willChange: 'transform, opacity, filter'
-                            }}
-                        />
-                    </div>
-                ))}
+                {[...clientLogos, ...clientLogos]
+                    .map((logo, index) => (
+                        <div key={index} className="logo-slide">
+                            <Image
+                                src={logo.src}
+                                alt={logo.alt}
+                                width={150}
+                                height={50}
+                                className="logo-image"
+                                style={{
+                                    height: '50px',
+                                    width: 'auto',
+                                    objectFit: 'contain',
+                                    willChange: 'transform, opacity, filter'
+                                }}
+                            />
+                        </div>
+                    ))}
             </div>
         </section>
     );

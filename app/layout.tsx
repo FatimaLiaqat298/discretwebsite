@@ -8,6 +8,7 @@ import StructuredData from "@/src/components/SEO/StructuredData";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://discret.digital'),
   title: "Discret Digital | Scale Your Startup with Smart Systems",
   description: "Discret Digital empowers founders to scale from chaos to clarity. We install the operations, tech, and marketing infrastructure that turns startups into $10M+ scalable engines.",
   keywords: ["Discret Digital", "startup scaling", "business automation", "growth systems", "SOP development", "performance marketing", "founder freedom", "creative agency", "growth infrastructure"],

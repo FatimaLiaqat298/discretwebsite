@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export function ImageWithFallback({ src, alt, className, ...props }) {
     const [error, setError] = useState(false);
@@ -15,12 +16,16 @@ export function ImageWithFallback({ src, alt, className, ...props }) {
     }
 
     return (
-        <img
-            src={src}
-            alt={alt}
-            className={className}
-            onError={() => setError(true)}
-            {...props}
-        />
+        <div className={className} style={{ position: 'relative', overflow: 'hidden' }}>
+            <Image
+                src={src}
+                alt={alt}
+                fill
+                style={{ objectFit: 'cover' }}
+                onError={() => setError(true)}
+                unoptimized
+                {...props}
+            />
+        </div>
     );
 }

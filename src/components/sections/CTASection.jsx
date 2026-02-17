@@ -32,7 +32,7 @@ const CTASection = () => {
                         marginBottom: '24px',
                         textTransform: 'uppercase'
                     }} className="cta-title">
-                        Ready to stop "managing" <br className="desktop-only" />
+                        Ready to stop &quot;managing&quot; <br className="desktop-only" />
                         <span style={{ color: '#F68D20' }}>and start scaling?</span>
                     </h2>
 
@@ -43,7 +43,7 @@ const CTASection = () => {
                         margin: '0 auto 40px',
                         lineHeight: 1.6
                     }} className="cta-description">
-                        You’ve done the hard work of starting. Let us do the hard work of scaling. Join 120+ founders who have offloaded their backend to Discret Digital.
+                        You&apos;ve done the hard work of starting. Let us do the hard work of scaling. Join 120+ founders who have offloaded their backend to Discret Digital.
                     </p>
 
                     <a
